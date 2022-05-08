@@ -1,0 +1,28 @@
+import * as React from 'react';
+import { Card, CardHeader, CardMedia, Typography, Box } from '@mui/material';
+import Rate from './Rate';
+
+export default function RecipieCard(props) {
+    return (
+        <Card sx={{ maxWidth: 1 }}>
+            <CardHeader
+                titleTypographyProps={{
+                    fontSize: 22,
+                }}
+                title={props.recipie.recipieName}
+            />
+            <CardMedia
+                component="img"
+                height="194"
+                image={props.recipie.imageUrl}
+                alt="Paella dish"
+            />
+            <Box padding={1} bgcolor="primary.main" sx={{display:"flex", justifyContent: "space-between", alignItems:"center"}}> 
+                <Typography variant='h6'>
+                    Calificacion
+                </Typography>
+                <Rate rating={props.recipie.rate}/>
+            </Box>
+        </Card>
+    );
+}
