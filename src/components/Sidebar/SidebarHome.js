@@ -17,7 +17,7 @@ export default function Sidebar(){
             <NestedFilterList 
                 filterName={"Dificultad"} 
                 icon={FitnessCenter} 
-                options={["Principiante","Medio","Chef"]}
+                options={["1","2","3","4","5"]}
             />
             <NestedFilterList 
                 filterName={"Tiempo de Preparacion"} 

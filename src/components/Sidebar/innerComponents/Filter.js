@@ -20,7 +20,7 @@ export default function Filter(props){
 
 
     return(
-      <List dense sx={{ pl: 4, width:"86.2%", bgcolor: 'background.paper' }}>
+      <List dense sx={{ pl: 4, bgcolor: 'background.paper' }}>
         {props.options.map((value) => {
           const labelId = `checkbox-list-secondary-label-${value}`;
           return (

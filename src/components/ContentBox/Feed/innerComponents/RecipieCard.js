@@ -8,6 +8,7 @@ export default function RecipieCard(props) {
             <CardHeader
                 titleTypographyProps={{
                     fontSize: 22,
+                    fontWeight:" bold",
                 }}
                 title={props.recipie.recipieName}
             />

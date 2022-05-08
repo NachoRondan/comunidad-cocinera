@@ -12,7 +12,7 @@ export default function ContentBox(props){
             <Box
                 padding={2}
                 flex={10}
-                bgcolor="#E5E5E5"
+                bgcolor="contentBackground.main"
                 height="100vh"
                 sx={{display:{xs:"block"}}}
             >
@@ -26,7 +26,6 @@ export default function ContentBox(props){
                 padding={2}
                 flex={10}
                 bgcolor="#E5E5E5"
-                height="100vh"
                 sx={{display:{xs:"block"}}}
             >
                 <RecipieManager recipies={props.user.recipies}/>

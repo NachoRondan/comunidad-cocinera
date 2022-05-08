@@ -9,6 +9,7 @@ const textLightColor = "#A07568"
 const textBlackColor = "#212121"
 const successColor = "#C7D8C6"
 const errorColor = "#491200"
+const contentBackgroundColor = "#E5E5E5"
 
 /*Actual theme*/
 const theme = createTheme({
@@ -30,7 +31,10 @@ const theme = createTheme({
         },
         error:{
             main: errorColor
-        }
+        },
+        contentBackground:{
+            main: contentBackgroundColor
+        },
     },
     components:{
         MuiToolbar: {

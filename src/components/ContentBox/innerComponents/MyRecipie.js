@@ -1,28 +1,43 @@
 import * as React from 'react';
 import { Card, CardHeader, CardMedia, Typography, Box } from '@mui/material';
-import Rate from '../Feed/innerComponents/Rate';
+import { DeleteOutline, PausePresentation, Edit } from '@mui/icons-material';
+import ActionOption from './ActionOption';
 
 export default function RecipieCard(props) {
     return (
-        <Card sx={{ maxWidth: 1 }}>
+        <Card sx={{ maxWidth: 1 }} >
             <CardHeader
-                titleTypographyProps={{
+                    titleTypographyProps={{
                     fontSize: 22,
+                    fontWeight:" bold",
                 }}
                 title={props.recipie.recipieName}
             />
-            <CardMedia
-                component="img"
-                height="194"
-                image={props.recipie.imageUrl}
-                alt="Paella dish"
-            />
-            <Box padding={1} bgcolor="primary.main" sx={{display:"flex", justifyContent: "space-between", alignItems:"center"}}> 
-                <Typography variant='h6'>
-                    Calificacion
-                </Typography>
-                <Rate rating={props.recipie.rate}/>
+            <Box padding={3} display="flex" flexDirection="row">
+                
+                <Box flex={3}>
+                    <CardMedia
+                        component="img"
+                        height="194"
+                        image={props.recipie.imageUrl}
+                        alt="Paella dish"
+                    />
+                    <Box padding={1} bgcolor="primary.main" sx={{display:"flex", justifyContent: "center", alignItems:"center"}}> 
+                        <Typography variant='h6'>
+                            {props.recipie.recipieName}
+                        </Typography>
+                    </Box>
+                </Box>
+                
+                <Box flex={0.5}></Box>
+
+                <Box flex={6} display="flex" flexDirection="column" padding={3} bgcolor="primary.main" sx={{display:"flex", justifyContent: "space-between"}}> 
+                    <ActionOption optionTitle="Calificacion" rate={props.recipie.rate}/>
+                    <ActionOption optionTitle="Editar" icon={Edit} />
+                    <ActionOption optionTitle="Pausar" icon={PausePresentation} />
+                    <ActionOption optionTitle="Eliminar" icon={DeleteOutline} />
+                </Box>
             </Box>
-        </Card>
+        </Card>  
     );
 }
