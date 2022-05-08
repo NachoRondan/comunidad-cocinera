@@ -12,8 +12,10 @@ export default function RecipieCard(props) {
                     fontWeight:" bold",
                 }}
                 title={props.recipie.recipieName}
+                
+                sx={{ display: { xs: 'block', sm: 'none' },}}
             />
-            <Box padding={3} display="flex" flexDirection="row">
+            <Box padding={3} display="flex" flexDirection="row" >
                 
                 <Box flex={3}>
                     <CardMedia
@@ -21,15 +23,15 @@ export default function RecipieCard(props) {
                         height="194"
                         image={props.recipie.imageUrl}
                         alt="Paella dish"
+                        sx={{ display: { xs: 'none', sm: 'block' },}}
                     />
-                    <Box padding={1} bgcolor="primary.main" sx={{display:"flex", justifyContent: "center", alignItems:"center"}}> 
-                        <Typography variant='h6'>
+                    <Box padding={1} bgcolor="primary.main" sx={{ display: { xs: 'none', sm: 'flex' }, justifyContent: "center", alignItems:"center"}}> 
+                        <Typography variant='subtitle1' fontSize={22}>
                             {props.recipie.recipieName}
                         </Typography>
                     </Box>
                 </Box>
-                
-                <Box flex={0.5}></Box>
+                <Box flex={0.5} sx={{ display: { xs: 'none', sm: 'block' },}}></Box>
 
                 <Box flex={6} display="flex" flexDirection="column" padding={3} bgcolor="primary.main" sx={{display:"flex", justifyContent: "space-between"}}> 
                     <ActionOption optionTitle="Calificacion" rate={props.recipie.rate}/>

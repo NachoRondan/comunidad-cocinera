@@ -18,7 +18,7 @@ function App() {
   const testChef = { name: "Mel", lastname:"Gibson", nickname:"MG" , age: 66, avatarUrl: 'MelGibson.jpg'};
 
   const testRecipie1 = {recipieName: "Paella", imageUrl: PaellaImg,rate: 4.5, user: testChef}
-  const testRecipie2 = {recipieName: "Sopa", imageUrl: SopaImg, rate: 2, user: testChef}
+  const testRecipie2 = {recipieName: "Sopa de Zapallo", imageUrl: SopaImg, rate: 2, user: testChef}
   const testRecipie3 = {recipieName: "Milanesa Napolitana", imageUrl: MilaImg, rate: 2.9, user: testUser}
   const testRecipie4 = {recipieName: "Tarta de Jamon y queso", imageUrl: TartaImg, rate: 4.5, user: testChef}
   const testRecipie5 = {recipieName: "Carne al horno", imageUrl: CarneImg, rate: 2, user: testChef}

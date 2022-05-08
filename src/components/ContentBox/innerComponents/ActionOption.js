@@ -1,24 +1,34 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, IconButton } from "@mui/material"
 import Rate from '../Feed/innerComponents/Rate';
 
 export default function ActionOption(props){
     if(props.rate){
         return(
             <Box display="flex" flexDirection="row" sx={{display:"flex", justifyContent: "space-between", alignItems:"center"}}>
-                <Typography variant='h6'>
-                    Calificacion
-                </Typography>
-                <Rate rating={props.rate}/>
+                <Box flex={9}>
+                    <Typography variant='h6'>
+                        {props.optionTitle}
+                    </Typography>
+                </Box>
+                <Box flex={3} sx={{display:"flex", justifyContent:"center"}}>
+                    <Rate rating={props.rate}/>
+                </Box>
             </Box>
         )
     }
     else{
         return(
             <Box display="flex" flexDirection="row" sx={{display:"flex", justifyContent: "space-between", alignItems:"center"}}>
-                <Typography variant='h6'>
-                    {props.optionTitle}
-                </Typography>
-                <props.icon fontSize='large'/>
+                <Box flex={9}>
+                    <Typography variant='h6'>
+                        {props.optionTitle}
+                    </Typography>
+                </Box>
+                <Box flex={3} sx={{display:"flex", justifyContent:"center"}}>
+                    <IconButton color="text">
+                        <props.icon fontSize='large'/>
+                    </IconButton>
+                </Box>
             </Box>
         )
     }
