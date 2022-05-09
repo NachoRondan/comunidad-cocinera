@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Profile from './pages/ProfilePage';
 import SignIn from './pages/SignInPage';
+import RecipiePage from './pages/RecipiePage'
 
 import PaellaImg from './assets/paella.jpg'
 import SopaImg from './assets/sopa.jpg'
@@ -19,7 +20,7 @@ function App() {
 
   const testRecipie1 = {recipieName: "Paella", imageUrl: PaellaImg,rate: 4.5, user: testChef}
   const testRecipie2 = {recipieName: "Sopa de Zapallo", imageUrl: SopaImg, rate: 2, user: testChef}
-  const testRecipie3 = {recipieName: "Milanesa Napolitana", imageUrl: MilaImg, rate: 2.9, user: testUser}
+  const testRecipie3 = {recipieName: "Milanesa Napolitana", dificulty: 1, imageUrl: MilaImg, rate: 2.9, user: testUser}
   const testRecipie4 = {recipieName: "Tarta de Jamon y queso", imageUrl: TartaImg, rate: 4.5, user: testChef}
   const testRecipie5 = {recipieName: "Carne al horno", imageUrl: CarneImg, rate: 2, user: testChef}
   const testRecipie6 = {recipieName: "Ensalada Cesar", imageUrl: EnsaladaImg, rate: 2.9, user: testUser}
@@ -36,6 +37,7 @@ function App() {
         <Route path='home' element={<HomePage feed={feed} user={testUserRecipies}/>}/>
         <Route path='profile/info' element={<Profile subtitle="Mis Datos" user={testUserRecipies}/>}/>
         <Route path='profile/mis-recetas' element={<Profile subtitle="Mis Recetas" user={testUserRecipies}/>}/>
+        <Route path='profile/mis-recetas/receta' element={<RecipiePage recipie={testRecipie3} />}/>
       </Routes>
     </BrowserRouter>
   );

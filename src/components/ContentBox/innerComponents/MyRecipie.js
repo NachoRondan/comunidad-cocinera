@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { Card, CardHeader, CardMedia, Typography, Box } from '@mui/material';
 import { DeleteOutline, PausePresentation, Edit } from '@mui/icons-material';
-import ActionOption from './ActionOption';
+import ActionOptionRate from './actionOptions/ActionOptionRate';
+import ActionOptionEdit from './actionOptions/ActionOptionEdit';
+import ActionOptionPause from './actionOptions/ActionOptionPause';
+import ActionOptionDelete from './actionOptions/ActionOptionDelete';
 
 export default function RecipieCard(props) {
     return (
@@ -34,10 +37,10 @@ export default function RecipieCard(props) {
                 <Box flex={0.5} sx={{ display: { xs: 'none', sm: 'block' },}}></Box>
 
                 <Box flex={6} display="flex" flexDirection="column" padding={3} bgcolor="primary.main" sx={{display:"flex", justifyContent: "space-between"}}> 
-                    <ActionOption optionTitle="Calificacion" rate={props.recipie.rate}/>
-                    <ActionOption optionTitle="Editar" icon={Edit} />
-                    <ActionOption optionTitle="Pausar" icon={PausePresentation} />
-                    <ActionOption optionTitle="Eliminar" icon={DeleteOutline} />
+                    <ActionOptionRate optionTitle="Calificacion" rate={props.recipie.rate}/>
+                    <ActionOptionEdit optionTitle="Editar" icon={Edit} />
+                    <ActionOptionPause optionTitle="Pausar" icon={PausePresentation} />
+                    <ActionOptionDelete optionTitle="Eliminar" icon={DeleteOutline} />
                 </Box>
             </Box>
         </Card>  

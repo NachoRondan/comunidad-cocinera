@@ -6,7 +6,7 @@ import ContentBox from "../components/ContentBox/ContentBox"
 export default function Profile(props){
     
     return(
-        <div className="App">
+        <div className="Profile">
             <Navbar subtitle={props.subtitle} user={props.user}/>
             <Stack
                 direction={"row"}
