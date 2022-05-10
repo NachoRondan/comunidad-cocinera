@@ -38,8 +38,8 @@ function App() {
         <Route path='home' element={<HomePage feed={feed} user={testUserRecipies}/>}/>
         <Route path='profile/info' element={<Profile subtitle="Mis Datos" user={testUserRecipies}/>}/>
         <Route path='profile/mis-recetas' element={<Profile subtitle="Mis Recetas" user={testUserRecipies}/>}/>
-        <Route path='profile/mis-recetas/receta' element={<RecipiePage recipie={testRecipie3} />}/>
-        <Route path='home/receta' element={<SingleRecipiePage recipie={testRecipie3} />}/>
+        <Route path='profile/mis-recetas/:recipieId' element={<RecipiePage/>}/>
+        <Route path='home/receta/:recipieId' element={<SingleRecipiePage user={testUser}/>}/>
       </Routes>
     </BrowserRouter>
   );

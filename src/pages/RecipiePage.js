@@ -1,11 +1,18 @@
 import { Stack } from '@mui/material'
+import { useParams } from 'react-router-dom'
 import RecipieEditor from '../components/ContentBox/RecipieEditor/RecipieEditor'
 import Navbar from '../components/Navbar/Navbar'
+import recipies from '../data/RecipiesData'
+
 
 export default function RecipiePage(props){
+
+    const { recipieId } = useParams();
+    const recipie = recipies.find((recipie) => recipieId === recipie.id);
+
     return(
-        <div className="Recipie">
-            <Navbar subtitle={props.recipie.recipieName} user={props.recipie.user}/>
+        <div className="RecipiePage">
+            <Navbar subtitle={recipie.recipieName} user={props.recipie.user}/>
             <Stack
                 direction={"row"}
                 justifyContent="space-between"
@@ -13,7 +20,7 @@ export default function RecipiePage(props){
                 
                 bgcolor="contentBackground.main"
             >
-                <RecipieEditor recipie={props.recipie}/>
+                <RecipieEditor recipie={recipie}/>
             </Stack>
         </div>
     )

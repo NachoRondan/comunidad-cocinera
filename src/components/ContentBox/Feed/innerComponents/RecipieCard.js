@@ -4,8 +4,9 @@ import Rate from './Rate';
 import { Link } from 'react-router-dom';
 
 export default function RecipieCard(props) {
+    
     return (
-        <Box sx={{ textDecoration: 'none' }} component={Link} to={"receta"}>
+        <Box sx={{ textDecoration: 'none' }} component={Link} to={`receta/${props.recipie.id}`}>
         <Card sx={{ maxWidth: 1 }}>
             <CardHeader
                 titleTypographyProps={{
