@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import RecipieCard from "./innerComponents/RecipieCard";
 import recipies from '../../../data/RecipiesData'
 
-export default function(props){
+export default function(){
     
     return(
         <Grid container spacing={3} padding={2}>

@@ -20,7 +20,7 @@ export default function UserAvatar(props) {
             <Typography variant="h6" sx={{display: { xs:"none", md:"block"}}}>
                 {props.user.nickname}
             </Typography>
-            <Avatar onClick={handleClick} alt={props.user.name} src={require(`../../../assets/${ props.user.avatarUrl }`)}/>
+            <Avatar onClick={handleClick} alt={props.user.name} src={props.user.avatarUrl }/>
             <Menu
                 anchorEl={anchorEl}  
                 onClose={handleClose}

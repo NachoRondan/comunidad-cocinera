@@ -41,7 +41,7 @@ export default function RecipieCard(props) {
 
                 <Box flex={6} display="flex" flexDirection="column" padding={3} bgcolor="primary.main" sx={{display:"flex", justifyContent: "space-between"}}> 
                     <ActionOptionRate optionTitle="Calificacion" rate={props.recipie.rate}/>
-                    <ActionOptionEdit optionTitle="Editar" icon={Edit} />
+                    <ActionOptionEdit optionTitle="Editar" recipieId={props.recipie.id} icon={Edit} />
                     <ActionOptionPause optionTitle="Pausar" icon={PausePresentation} />
                     <ActionOptionDelete optionTitle="Eliminar" icon={DeleteOutline} />
                 </Box>

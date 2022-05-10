@@ -12,7 +12,7 @@ export default function RecipiePage(props){
 
     return(
         <div className="RecipiePage">
-            <Navbar subtitle={recipie.recipieName} user={props.recipie.user}/>
+            <Navbar subtitle={recipie.recipieName} user={props.user}/>
             <Stack
                 direction={"row"}
                 justifyContent="space-between"

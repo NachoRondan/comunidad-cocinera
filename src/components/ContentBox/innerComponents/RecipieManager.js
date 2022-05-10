@@ -2,6 +2,7 @@ import { Grid } from "@mui/material"
 import MyRecipie from "./MyRecipie"
 
 export default function RecipieManager(props){
+
     return(
         <Grid container spacing={3} padding={2}>
             {props.recipies.map(recipie => (

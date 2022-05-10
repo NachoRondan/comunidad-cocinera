@@ -1,11 +1,12 @@
 import { Box, } from "@mui/material";
 import Information from "./innerComponents/Information";
 import RecipieManager from "./innerComponents/RecipieManager";
-
+import recipies from "../../data/RecipiesData";
 
 
 export default function ContentBox(props){
     const url = window.location.href;
+    const userRecipies = recipies.filter((recipie) => props.user.recipiesId.includes(recipie.id) );
 
     if(url.includes("info")){
         return(
@@ -25,10 +26,10 @@ export default function ContentBox(props){
             <Box
                 padding={2}
                 flex={10}
-                bgcolor="#E5E5E5"
+                bgcolor="contentBackground.main"
                 sx={{display:{xs:"block"}}}
             >
-                <RecipieManager recipies={props.user.recipies}/>
+                <RecipieManager recipies={userRecipies}/>
             </Box>
         )
     }

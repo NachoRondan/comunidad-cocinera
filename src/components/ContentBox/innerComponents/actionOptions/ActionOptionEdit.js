@@ -10,7 +10,7 @@ export default function ActionOption(props){
                 </Typography>
             </Box>
             <Box flex={3} sx={{display:"flex", justifyContent:"center"}}>
-                <IconButton component={Link} to={"receta"} color="text">
+                <IconButton component={Link} to={`${props.recipieId}`} color="text">
                     <props.icon fontSize='large'/>
                 </IconButton>
             </Box>
