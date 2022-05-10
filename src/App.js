@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import Profile from './pages/ProfilePage';
 import SignIn from './pages/SignInPage';
 import RecipiePage from './pages/RecipiePage'
+import SingleRecipiePage from './pages/SingleRecipiePage'
 
 import PaellaImg from './assets/paella.jpg'
 import SopaImg from './assets/sopa.jpg'
@@ -38,6 +39,7 @@ function App() {
         <Route path='profile/info' element={<Profile subtitle="Mis Datos" user={testUserRecipies}/>}/>
         <Route path='profile/mis-recetas' element={<Profile subtitle="Mis Recetas" user={testUserRecipies}/>}/>
         <Route path='profile/mis-recetas/receta' element={<RecipiePage recipie={testRecipie3} />}/>
+        <Route path='home/receta' element={<SingleRecipiePage recipie={testRecipie3} />}/>
       </Routes>
     </BrowserRouter>
   );

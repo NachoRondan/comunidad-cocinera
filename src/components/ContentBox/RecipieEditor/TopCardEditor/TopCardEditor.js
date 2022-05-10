@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Card, CardHeader, CardMedia, Typography, Box } from '@mui/material';
-import TagOption from './TopCardOptions/TagOption';
+import { Card, CardMedia, Box } from '@mui/material';
+import TagOption from './TagOption';
 
 
 export default function TopCardEditor(props) {

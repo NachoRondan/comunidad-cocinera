@@ -3,7 +3,9 @@ import React from 'react';
 
 
 export default function DataItem(props){
-    var value = props.data
+    const [value, setValue] = React.useState(props.data);
+
+    const [auxValue, setAuxValue] = React.useState("");
 
     const [open, setOpen] = React.useState(false);
 
@@ -16,7 +18,13 @@ export default function DataItem(props){
     };
 
     const handleModify = () => {
+        setValue(auxValue);
         setOpen(false);
+
+    };
+
+    const handleChange = (event) => {
+        setAuxValue(event.target.value);
     };
 
     return(
@@ -35,8 +43,9 @@ export default function DataItem(props){
                 autoFocus
                 margin="dense"
                 id="name"
-                label={props.title}
+                label={value}
                 fullWidth
+                onChange={handleChange}
                 variant="standard"
             />
             </DialogContent>

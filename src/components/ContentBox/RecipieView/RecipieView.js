@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { Box, Stack } from '@mui/material';
-import TopCardEditor from './TopCardEditor/TopCardEditor';
-import PaperEditor from './PaperEditor/PaperEditor';
+import TopCardView from './TopCardView/TopCardView';
+import PaperView from './PaperView/PaperView';
 
-export default function RecipieEditor(props) {
+export default function RecipieView(props) {
     return (
         <Box
             flex={10}
             sx={{display:{xs:"block"}, justifyContent:"center"}}
         >
             <Stack spacing={1}>
-                <TopCardEditor recipie={props.recipie}/>
-                <PaperEditor recipie={props.recipie}/>
+                <TopCardView recipie={props.recipie}/>
+                <PaperView recipie={props.recipie}/>
             </Stack>
         </Box>
     );

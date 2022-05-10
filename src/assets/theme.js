@@ -45,6 +45,24 @@ const theme = createTheme({
                 },
             },
         },
+        MuiStepIcon: {
+            styleOverrides: {
+                root: {
+                    color: primaryColor,
+                    "&$buttonDisabled": {
+                        color: primaryColor,
+                    }
+                  },
+                  buttonDisabled: {},
+            }
+          },
+          MuiStepLabel: {
+            styleOverrides: {
+                label: {
+                    color: textBlackColor,
+                  },
+            }
+          },
     },
 });
 

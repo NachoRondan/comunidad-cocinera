@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { Card, CardHeader, CardMedia, Typography, Box } from '@mui/material';
 import Rate from './Rate';
+import { Link } from 'react-router-dom';
 
 export default function RecipieCard(props) {
     return (
+        <Box sx={{ textDecoration: 'none' }} component={Link} to={"receta"}>
         <Card sx={{ maxWidth: 1 }}>
             <CardHeader
                 titleTypographyProps={{
@@ -25,5 +27,6 @@ export default function RecipieCard(props) {
                 <Rate rating={props.recipie.rate}/>
             </Box>
         </Card>
+        </Box>
     );
 }
