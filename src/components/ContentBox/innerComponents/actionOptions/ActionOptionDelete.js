@@ -39,6 +39,9 @@ export default function ActionOption(props){
                     </DialogContentText>
                     </DialogContent>
                     <DialogActions>
+                    <Button variant="contained" color="success" onClick={handleClose} autoFocus>
+                        Cancelar
+                    </Button>
                     <Button variant="contained" color="error" onClick={handleClose} autoFocus>
                         Eliminar
                     </Button>

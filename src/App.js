@@ -9,7 +9,7 @@ import users from './data/UsersData'
 
 function App() {
   const testUser = users.find((user)=> user.id === "0");
-  
+
   return (
     <BrowserRouter>
       <Routes>
@@ -18,7 +18,7 @@ function App() {
         <Route path='profile/info' element={<Profile subtitle="Mis Datos" user={testUser}/>}/>
         <Route path='profile/mis-recetas' element={<Profile subtitle="Mis Recetas" user={testUser}/>}/>
         <Route path='profile/mis-recetas/:recipieId' element={<RecipiePage user={testUser}/>}/>
-        <Route path='home/receta/:recipieId' element={<SingleRecipiePage user={testUser}/>}/>
+        <Route path='/receta/:recipieId' element={<SingleRecipiePage user={testUser}/>}/>
       </Routes>
     </BrowserRouter>
   );

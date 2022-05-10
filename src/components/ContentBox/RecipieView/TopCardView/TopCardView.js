@@ -6,7 +6,6 @@ import { PortableWifiOffSharp } from '@mui/icons-material';
 export default function TopCardView(props){
     return(
         <Card sx={{ maxWidth: 1, maxHeight: 1 }} >
-            <Typography padding={1} variant="h2" color="textBold.main" >{props.recipie.recipieName}</Typography>
             <Box padding={1} display="flex" flexDirection="row" >
                 <Box flex={3}>
                     <CardMedia
