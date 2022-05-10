@@ -18,13 +18,13 @@ function App() {
   const testUser = { name: "Ignacio", lastname: "Rondan", mail:"nacho.rondan@gmail.com",nickname: "Nacho", age: 24, avatarUrl: 'userPicture.jpg'};
   const testChef = { name: "Mel", lastname:"Gibson", nickname:"MG" , age: 66, avatarUrl: 'MelGibson.jpg'};
 
-  const testRecipie1 = {recipieName: "Paella", imageUrl: PaellaImg,rate: 4.5, user: testChef}
-  const testRecipie2 = {recipieName: "Sopa de Zapallo", imageUrl: SopaImg, rate: 2, user: testChef}
-  const testRecipie3 = {recipieName: "Milanesa Napolitana", dificulty: 1, imageUrl: MilaImg, rate: 2.9, user: testUser}
-  const testRecipie4 = {recipieName: "Tarta de Jamon y queso", imageUrl: TartaImg, rate: 4.5, user: testChef}
-  const testRecipie5 = {recipieName: "Carne al horno", imageUrl: CarneImg, rate: 2, user: testChef}
-  const testRecipie6 = {recipieName: "Ensalada Cesar", imageUrl: EnsaladaImg, rate: 2.9, user: testUser}
-  const testRecipie7 = {recipieName: "Pollo al disco", imageUrl: PolloImg, rate: 2, user: testChef}
+  const testRecipie1 = {recipieName: "Paella", dificulty: 1, imageUrl: PaellaImg,rate: 4.5, user: testChef}
+  const testRecipie2 = {recipieName: "Sopa de Zapallo", dificulty: 4, imageUrl: SopaImg, rate: 2, user: testChef}
+  const testRecipie3 = {recipieName: "Milanesa Napolitana", ingredients:[{label:'Milanesa'},{label:'Queso'},{label:'Jamon'},{label:''}], steps:[{label:'Freir Milanesa'},{label:'Agregar queso'}, {label:'Agregar Jamon'},{label:''}], description: "Una milanesa napolitana", dificulty: 1, imageUrl: MilaImg, rate: 2.9, user: testUser}
+  const testRecipie4 = {recipieName: "Tarta de Jamon y queso", dificulty: 3, imageUrl: TartaImg, rate: 4.5, user: testChef}
+  const testRecipie5 = {recipieName: "Carne al horno", dificulty: 5, imageUrl: CarneImg, rate: 2, user: testChef}
+  const testRecipie6 = {recipieName: "Ensalada Cesar", dificulty: 1, imageUrl: EnsaladaImg, rate: 2.9, user: testUser}
+  const testRecipie7 = {recipieName: "Pollo al disco", dificulty: 1, imageUrl: PolloImg, rate: 2, user: testChef}
 
   const testUserRecipies = { recipies: [testRecipie1, testRecipie2, testRecipie3], name: "Ignacio", lastname: "Rondan", mail:"nacho.rondan@gmail.com",nickname: "Nacho", age: 24, avatarUrl: 'userPicture.jpg'};
 
