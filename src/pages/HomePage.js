@@ -11,7 +11,7 @@ export default function HomePage(props){
                 direction={"row"}
                 justifyContent="space-between"
             >
-                <SidebarHome/>
+                <SidebarHome />
                 <ContentBox feed={props.feed}/>
             </Stack>
         </div>
