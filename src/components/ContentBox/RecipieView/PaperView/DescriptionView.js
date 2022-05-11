@@ -20,9 +20,9 @@ export default function Description(props){
                 </Box>
             </Box>
             <Box flex={6}>
-                <Typography paddingY={1} variant="h2" color="textBold.main" >Tu Calificacion</Typography>
+                <Typography paddingY={1} paddingX={7} variant="h2" color="textBold.main" >Tu Calificacion</Typography>
                 <Box padding={1} display="flex" flexDirection="column" >
-                    <Box paddingX={12.5} display="flex" justifyContent="flex-end" maxWidth='1'>
+                    <Box paddingX={5.5} display="flex" justifyContent="flex-end" maxWidth='1'>
                         <FormControl size="small" sx={{ m: 1, minWidth: 80 }} color="text">
                             <Select
                                 labelId="demo-simple-select-label"
