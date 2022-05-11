@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Card, CardMedia, Box, Typography } from '@mui/material';
 import Tag from './Tag';
-import { PortableWifiOffSharp } from '@mui/icons-material';
 
 export default function TopCardView(props){
     return(
