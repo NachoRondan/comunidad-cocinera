@@ -8,7 +8,9 @@ export default function PaperEditor(props){
     return(
         <Card sx={{ maxWidth: 1, maxHeight: 1 }} >
             <Description description={props.recipie.description}/>
+            <Divider/>
             <ElementManager label="Ingrediente" list={props.recipie.ingredients}/>
+            <Divider/>
             <ElementManager label="Paso" list={props.recipie.steps}/>
             <Divider/>
             <Box paddingY={2} paddingX={3} display="flex" justifyContent="center" >

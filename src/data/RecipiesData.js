@@ -6,6 +6,9 @@ import CarneImg from '../assets/carne.jpg'
 import EnsaladaImg from '../assets/ensalada.jpg'
 import PolloImg from '../assets/pollo.jpg'
 
+
+
+
 const recipies = [
     {
         id: "0",
@@ -17,6 +20,10 @@ const recipies = [
         ingredients:[{label:'Arroz'},{label:'Queso'},{label:'Salsa de tomate'},{label:''}],
         steps:[{label:'Cocinar Arroz'},{label:'Agregar queso'}, {label:'Agregar Salsa de tomate'},{label:''}],
         description: "Una paella...", 
+        type:"Almuerzo",
+        time: "Media Hora",
+        veganDiet: "No",
+        celiacDiet: "No"
     },
     {
         id: "1",
@@ -27,18 +34,26 @@ const recipies = [
         userId: "1",
         ingredients:[{label:'1 litro de Agua'}, {label:'Arroz'}, {label:'Un zapallo'},{label:'Verduras'},{label:''}],
         steps:[{label:'Hervir agua'},{label:'Hervir el zapallo'}, {label:'Cocinar las verduras'}, {label:'Mezclar'}, {label:''}],
-        description: "Una sopa de zapallo ...", 
+        description: "Una sopa de zapallo ...",
+        type:"Cena",
+        time: "Media Hora",
+        veganDiet: "No",
+        celiacDiet: "No"
     },
     {
-        id: 2,
+        id: "2",
         recipieName: "Milanesa Napolitana",
         ingredients:[{label:'Milanesa'},{label:'Queso'},{label:'Jamon'},{label:''}],
         steps:[{label:'Freir Milanesa'},{label:'Agregar queso'}, {label:'Agregar Jamon'},{label:''}],
         description: "Una milanesa napolitana", 
-        dificulty: 1, 
+        dificulty: 4, 
         imageUrl: MilaImg, 
         rate: 2.9, 
-        userId: "0"
+        userId: "0",
+        type:"Cena",
+        time: "Media Hora",
+        veganDiet: "No",
+        celiacDiet: "No"
     },
     {
         id: '3',
@@ -50,9 +65,11 @@ const recipies = [
         ingredients:[{label:'Jamon'},{label:'Queso'},{label:'Tapas'},{label:''}],
         steps:[{label:'Colocar tapas'},{label:'Agregar queso'}, {label:'Agregar Jamon'}, {label:'Cocinar'}, {label:''}],
         description: "Una tarta de Jamon y queso", 
+        type:"Cena",
+        time: "Media Hora"
     },
     {
-        id: '3',
+        id: '6',
         recipieName: "Carne al horno",
         dificulty: 5,
         imageUrl: CarneImg,
@@ -61,6 +78,10 @@ const recipies = [
         ingredients:[{label:'Carne'},{label:'Papas'},{label:'Cebolla'},{label:''}],
         steps:[{label:'Desgrasar la carne'},{label:'Pelar papas'}, {label:'Saltear cebolla'}, {label:'Cocinar'}, {label:''}],
         description: "Carne al horno con papas y cebolla", 
+        type:"Cena",
+        time: "Media Hora",
+        veganDiet: "No",
+        celiacDiet: "No"
         
     },
     {
@@ -73,6 +94,10 @@ const recipies = [
         ingredients:[{label:'Lechuga'},{label:'Pollo'},{label:'Salsa Cesar'}, {label:'Pan'}, {label:''}],
         steps:[{label:'Cortar lechuga'},{label:'Cortar pollo'}, {label:'Tostar pan'}, {label:'Agregar salsa'}, {label:''}],
         description: "Ensalada cesar...", 
+        type:"Cena",
+        time: "Media Hora",
+        veganDiet: "No",
+        celiacDiet: "No"
     },
     {
         id: '5',
@@ -84,7 +109,11 @@ const recipies = [
         ingredients:[{label:'Pollo'},{label:'Cebolla'},{label:'Morron'}, {label:''}],
         steps:[{label:'Cortar Morron'},{label:'Cortar cebolla'}, {label:'Cortar pollo'}, {label:'Cocinar'}, {label:''}],
         description: "Pollo al disco...", 
-    }
+        type:"Cena",
+        time: "Media Hora",
+        veganDiet: "No",
+        celiacDiet: "No"
+    },
 ]
 
 export default recipies

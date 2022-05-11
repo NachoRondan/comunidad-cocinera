@@ -12,10 +12,9 @@ export default function Profile(props){
                 direction={"row"}
                 justifyContent="space-between"
             >
-                <Sidebar/>
+                <Sidebar user={props.user}/>
                 <ContentBox user={props.user}/>
             </Stack>
         </div>
     )
-
 }
