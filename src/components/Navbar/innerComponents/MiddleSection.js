@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 
+
 export default function MiddleSection(props) {
 
   const Search = styled('div')(({ theme }) => ({
@@ -50,17 +51,20 @@ export default function MiddleSection(props) {
 
   if(url.includes("home")){
     return(
+      
       <Box flex={4}>
-        <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Buscar..."
-              inputProps={{ 'aria-label': 'search' }}
-            />
-        </Search>
-        </Box>
+          <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Buscar..."
+                inputProps={{ 'aria-label': 'search' }}
+              />
+              
+          </Search>
+          </Box>
+
     );
   }
   else{

@@ -21,12 +21,14 @@ function Copyright(props) {
   }
 
 
-  export default function SignIn({setUserId}) {
+  export default function SignIn(props) {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessages, setErrorMessages] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const subtitle = props.subtitle;
 
 
     // User Login info
@@ -63,7 +65,7 @@ function Copyright(props) {
             setErrorMessages({ name: "pass", message: errors.pass });
           } else {
             setIsSubmitted(true);
-            setUserId({id:userData.id});
+            props.setUserId({id:userData.id});
             console.log(userData.id);
           }
         } else {
@@ -123,15 +125,13 @@ function Copyright(props) {
           <Avatar sx={{ m: 1, bgcolor: 'secondary' }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Typography component="div" variant="h6">
-            Sign in
-          </Typography>
+          <Typography variant="h6">Ingresar</Typography>
 
 
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1,alignItems: 'center'}}>
 
             <TextField
-                label="Username"
+                label="Usuario"
                 variant="filled"
                 margin="normal"
                 fullWidth
@@ -142,7 +142,7 @@ function Copyright(props) {
             />
             
             <TextField
-                label="Password"
+                label="Contraseña"
                 variant="filled"
                 margin="normal"
                 fullWidth
@@ -155,18 +155,18 @@ function Copyright(props) {
             {renderErrorMessage("pass")}
             
             <Button type="submit" variant="contained" color="primary" fullWidth sx={{ mt: 3, mb: 2 }}>
-          Sign in
+          Ingresar
         </Button>
 
         <Grid container>
               <Grid item xs>
-                <Link href="#" variant="textBoldColor">
-                  Forgot password?
+                <Link href="passrecovery" variant="textBoldColor">
+                  Olvidó su contraseña?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="textBoldColor">
-                  {"Sign Up"}
+                <Link href="registrarse" variant="textLightColor">
+                  {"Registrarse"}
                 </Link>
               </Grid>
             </Grid>
